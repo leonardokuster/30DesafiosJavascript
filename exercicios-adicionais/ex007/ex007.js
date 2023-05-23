@@ -1,14 +1,10 @@
-let nomeNave = prompt('Informe o nome da espaçonave:')
+let spaceship = prompt('Informe o nome da espaçonave: ')
+let inverse = ''
 
-console.log(nomeNave.length)
-
-let novoNome = ''
-
-while(nomeNave !== 'e'){
-    for (let i = nomeNave.length - 1; i >= 0; i--) {
-    
-        novoNome += nomeNave[i]
-    }
+for (let i = spaceship.length - 1; i >= 0; i--){
+    if (spaceship[i] !== 'e') {
+        inverse += spaceship[i] 
+    } else {break}
 }
 
-alert(`Nome antigo: ${nomeNave} \nNome atual: ${novoNome}`)
+alert(`O nome informado é: ${spaceship} \nSeu inverso é: ${inverse}`)

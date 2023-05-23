@@ -1,11 +1,13 @@
-let spaceship = prompt('Informe o nome da espaçonave: ')
-let inverse = ''
+let spaceshipSpeed = 150
 
-for (let i = spaceship.length - 1; i >= 0; i--){
-    if (spaceship[i] !== 'e') {
-        inverse += spaceship[i] 
-    } else {break}
+function unspeed(){
+    
+    while (spaceshipSpeed > 0) {
+        alert(`A velocidade atual é de ${spaceshipSpeed} km/s`)
+        spaceshipSpeed -= 20
+    }
+    
+    alert('Nave parada. As comportas podem ser abertas.')
 }
 
-alert(`O nome informado é: ${spaceship} \nSeu inverso é: ${inverse}`)
-
+unspeed() 

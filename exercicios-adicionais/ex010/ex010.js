@@ -1,55 +1,16 @@
-const spaceshipName = prompt('Informe o nome da nave: ')
-let spaceshipSpeed = 0
-let option = ''
+const hitchefSpaceships = [
+    ["Fenix", 8, true],
+    ["Golias", 10, true],
+    ["Helmet", 5, false],
+    ["Elemental", 3, true],
+    ["Darwin", 15, false]
+]
 
-function menu() {
-    return prompt('Selecione uma das opcões abaixo: \n\n1- Acelerar a nave em 5 km/s \n2- Desacelerar em 5 km/s \n3- Imprimir dados de bordo \n4- Sair do programa')
-}
+// Nesa lista, a plataforma de engate que a nave está parada é o [indice da nave no array + 1]
+// nome da nave, qnt tripulantes, se o processo de engate já foi concluido
 
-function speed() {
-    spaceshipSpeed += 5
-    return alert(`A velocidade de ${spaceshipName} é de ${spaceshipSpeed} km/s`)
-}
-
-function unspeed() {
-    if (spaceshipSpeed >= 5) {
-        spaceshipSpeed -= 5
-    } else {
-        spaceshipSpeed = 0
-    }
-    return alert(`A velocidade de ${spaceshipName} é de ${spaceshipSpeed} km/s`)
-}
-
-function showData() {
-    return alert(`A velocidade atual da nave ${spaceshipName} é de ${spaceshipSpeed} km/s`)
-}
-
-do {
-
-    option = menu()
-
-    switch(option) {
-        case '1':
-            speed()
-            break
-
-        case '2':
-            unspeed()
-            break
-
-        case '3':
-            showData()
-            break
-
-        case '4':
-            alert('Encerrando sistema.')
-            break
-
-        default:
-            alert('Opção inválida.')
-    }
-
-} while (option !== '4')
-
-
-
+// Queremos:
+// 1 - Filtrar o nome das naves que tem mais de 9 tripulantes
+// 2 - Informar o número da plataforma em que está na primeira nave que ainda está com engate pendente (função findIndex)
+// 3 - Destacar o nome de todas as naves colando-as em caixa alta e exibindo
+// 4 - Exibir um alerta com todas estas informações
