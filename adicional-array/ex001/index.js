@@ -5,12 +5,21 @@ Ou seja, se digitou: 1,2,3
 Vai aparecer: 3,2,1
 */
 
-let array = ["num1", "num2", "num3"]
+let array = []
+let inverse = []
 
-console.log(array)
+let n1 = prompt('Informe um número: ')
+let n2 = prompt('Informe um segundo número: ')
+let n3 = prompt('Informe um terceiro número: ')
 
-array.num1 = prompt('Informe um número: ')
-array.num2 = prompt('Informe um segundo número: ')
-array.num3 = prompt('Informe um terceiro número: ')
+array.push(n1)
+array.push(n2)
+array.push(n3)
 
-console.log(array)
+alert(`O array digitado é ${array.join(', ')}`)
+
+for (let i = array.length - 1; i >= 0 ; i--) {
+    inverse.push(array[i])
+}
+
+alert(`O array atual é ${inverse.join(', ')}`)
